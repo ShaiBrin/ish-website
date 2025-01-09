@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "./page/navigation";
+import Navigation from "./ui/page/navigation";
 
 export const metadata: Metadata = {
   title: "Ishraq Shabab",
