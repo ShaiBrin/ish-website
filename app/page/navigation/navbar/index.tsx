@@ -3,9 +3,13 @@ import Link from "next/link";
 import MenuIcon from '@mui/icons-material/Menu';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import { useState, useEffect } from "react";
+// import { useRouter } from "next/router";
+
 
 const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => {
     const [isMobile, setIsMobile] = useState(false);
+    // const router = useRouter();
+
 
     // Effect hook to handle screen resizing
     useEffect(() => {
@@ -24,6 +28,16 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
         window.removeEventListener("resize", handleResize);
         };
     }, []);
+
+     // Smooth scroll navigation
+    const handleScroll = (sectionId: string) => {
+        setTimeout(() => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 300); 
+      };
 
     return (
     <nav
@@ -57,29 +71,52 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
                     {/* Navbar Links */}
                     <ul className="hidden md:flex gap-x-16 text-gray-400">
                     <li>
-                        <Link href="/about">
-                        <p className="cursor-pointer hover:text-black transition duration-200">Work</p>
+                    <Link
+                        href="/work"
+                        scroll={false} // Disable automatic scrolling
+                        onClick={() => handleScroll("workiD")}
+                        >
+                        <p className="cursor-pointer hover:text-black transition duration-200">
+                            Work
+                        </p>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/maid/pickup">
-                        <p className="cursor-pointer hover:text-black transition duration-200">Projects</p>
-                        </Link>
+                    <Link
+                        href="/projects"
+                        scroll={false}
+                        onClick={() => handleScroll("projectsiD")}
+                        >
+                        <p className="cursor-pointer hover:text-black transition duration-200">
+                            Projects
+                        </p>
+                    </Link>
                     </li>
                     <li>
-                        <Link href="/maid/contacts">
-                        <p className="cursor-pointer hover:text-black transition duration-200">Blogs</p>
-                        </Link>
+                    <Link
+                        href="/blogs"
+                        scroll={false}
+                        onClick={() => handleScroll("blogsiD")}
+                        >
+                        <p className="cursor-pointer hover:text-black transition duration-200">
+                            Blogs
+                        </p>
+                    </Link>
                     </li>
                     <li>
-                        <Link href="/maid/contacts">
-                        <p className="cursor-pointer hover:text-black transition duration-200">Contact</p>
-                        </Link>
+                    <Link
+                        href="/contact"
+                        scroll={false}
+                        onClick={() => handleScroll("contactiD")}
+                        >
+                        <p className="cursor-pointer hover:text-black transition duration-200">
+                            Contact
+                        </p>
+                    </Link>
                     </li>
                     </ul>
                 </div>
             </div>
-        {/* </div> */}
       </div>
     </nav>
   );
