@@ -1,4 +1,3 @@
-// Work page
 import React from "react";
 import WorkExpTimeline from "../ui/work/timeline";
 import jobData from "../../data/jobData.json"
@@ -8,6 +7,6 @@ export default function Work() {
   return (
     <div>
       <WorkExpTimeline jobData={jobData as Job[]} />
-      </div>
+    </div>
   );
 }
