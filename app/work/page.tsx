@@ -1,7 +1,13 @@
+// Work page
+import React from "react";
+import WorkExpTimeline from "../ui/work/timeline";
+import jobData from "../../data/jobData.json"
+import { Job } from "../types/jobTypes";
+
 export default function Work() {
-    return (
-      <section id="workiD" className="min-h-screen">
-      </section>
-    );
-  }
-  
+  return (
+    <div>
+      <WorkExpTimeline jobData={jobData as Job[]} />
+      </div>
+  );
+}
