@@ -6,12 +6,12 @@ import { Social } from "../types/socialTypes";
 
 export default function Contact() {
   return (
-    <div className="flex">
-        <div className="ml-40 mr-80 pt-10">
+    <div className="flex flex-col lg:flex-row">
+        <div className="px-8 lg:ml-40 lg:mr-80 pt-10 md:w-3/4  w-full lg:w-2/3">
             <ContactForm />
         </div>
-        <div className="ml-40 w-1/2 pt-14">
-            <Socials socials={socialData as Social[] } />
+        <div className="px-8 lg:ml-40 lg:mr-40 pt-14 w-full lg:w-1/2">
+            <Socials socials={socialData as Social[]} />
         </div>
     </div>
   );

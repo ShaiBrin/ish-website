@@ -14,7 +14,7 @@ const Socials: React.FC<SocialsProps> = ({ socials }) => {
   return (
     <Box sx={{ width: '100%' }}>
       <Grid
-        container rowSpacing={20} columnSpacing={{ xs: 4, sm: 2, md: 3 }}
+        container rowSpacing={{ xs: 8, md:12, lg: 20 }} columnSpacing={{ xs: 3, sm: 36, md: 8 }}
       >
         {socials.map((social, index) => (
           <Grid key={index} size={6}>
