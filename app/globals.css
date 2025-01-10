@@ -19,3 +19,28 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.MuiTimelineItem-root {
+  margin-bottom: 0px; 
+}
+
+.MuiTimelineConnector-root {
+  height: 80px !important;
+}
+
+.MuiTimelineContent-root {
+  padding-top: 80px !important;
+}
+
+.timeline-dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+}
+
+.timeline-dot img {
+  border-radius: 50%;
+}

@@ -3,13 +3,10 @@ import Link from "next/link";
 import MenuIcon from '@mui/icons-material/Menu';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import { useState, useEffect } from "react";
-// import { useRouter } from "next/router";
 
 
 const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => {
     const [isMobile, setIsMobile] = useState(false);
-    // const router = useRouter();
-
 
     // Effect hook to handle screen resizing
     useEffect(() => {
@@ -28,17 +25,6 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
         window.removeEventListener("resize", handleResize);
         };
     }, []);
-
-     // Smooth scroll navigation
-    const handleScroll = (sectionId: string) => {
-        setTimeout(() => {
-          const section = document.getElementById(sectionId);
-          if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 300); 
-      };
-
     return (
     <nav
       className={`navbar-container fixed w-full z-20 transition-opacity duration-300 ${
@@ -73,8 +59,6 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
                     <li>
                     <Link
                         href="/work"
-                        scroll={false} // Disable automatic scrolling
-                        onClick={() => handleScroll("workiD")}
                         >
                         <p className="cursor-pointer hover:text-black transition duration-200">
                             Work
@@ -84,8 +68,6 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
                     <li>
                     <Link
                         href="/projects"
-                        scroll={false}
-                        onClick={() => handleScroll("projectsiD")}
                         >
                         <p className="cursor-pointer hover:text-black transition duration-200">
                             Projects
@@ -95,8 +77,6 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
                     <li>
                     <Link
                         href="/blogs"
-                        scroll={false}
-                        onClick={() => handleScroll("blogsiD")}
                         >
                         <p className="cursor-pointer hover:text-black transition duration-200">
                             Blogs
@@ -106,8 +86,6 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
                     <li>
                     <Link
                         href="/contact"
-                        scroll={false}
-                        onClick={() => handleScroll("contactiD")}
                         >
                         <p className="cursor-pointer hover:text-black transition duration-200">
                             Contact
