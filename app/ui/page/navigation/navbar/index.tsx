@@ -26,11 +26,15 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
         };
     }, []);
     return (
-    <nav
-      className={`navbar-container fixed w-full z-20 transition-opacity duration-300 ${
-        isOpen ? " bg-red opacity-0 pointer-events-none" : "opacity-100"
-      }`}
-    >
+        <nav
+        className={`navbar-container fixed w-full z-20 transition-opacity duration-300 ${
+          isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+        }`}
+        style={{
+          backgroundColor: "rgba(255, 255, 255, 0.9)", 
+        }}
+      >
+      
         
     <div className="w-full h-20 text-black sticky top-0 font-sans ">
         <div className="max-w-7xl mx-auto px-500 h-full">
