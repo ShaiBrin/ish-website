@@ -31,9 +31,8 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
         isOpen ? " bg-red opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-
         
-    <div className="w-full h-20 text-black sticky top-0 font-sans">
+    <div className="w-full h-20 text-black sticky top-0 font-sans ">
         <div className="max-w-7xl mx-auto px-500 h-full">
                 <div className="flex justify-between items-center h-full">
                     {/* Home Page Button */}
