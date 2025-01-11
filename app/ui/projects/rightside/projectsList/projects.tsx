@@ -14,16 +14,17 @@ const ProjectsGrid: React.FC<ProjectsProps> = ({ projects }) => {
       <Grid
         container
         rowSpacing={{ xs: 8, md: 1, lg: 5 }}
-        columnSpacing={{ xs: 3, sm: 6, md: 2 }}
+        columnSpacing={{ xs: 3, sm: 6, md: 8 }}
       >
         {projects.map((project, index) => (
           <Grid key={index} >
             <BasicCard
-              title={project.name}
-              subtitle="Project Subtitle" 
-              description={project.description}
+              name={project.name}
               logo={project.logo}
-            />
+              tech={project.tech}
+              description={project.description}
+              link={project.link}
+              />
           </Grid>
         ))}
       </Grid>
