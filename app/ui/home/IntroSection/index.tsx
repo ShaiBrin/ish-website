@@ -6,7 +6,7 @@ interface ProfileProps {
     profile: Profile;
 }
 
-const LeftSide : React.FC<ProfileProps> = ({ profile }) => {
+const IntroSide : React.FC<ProfileProps> = ({ profile }) => {
     return (
         <div className="flex flex-grow">
             <div className="w-full">
@@ -23,4 +23,4 @@ const LeftSide : React.FC<ProfileProps> = ({ profile }) => {
     );
 };
 
-export default LeftSide;
+export default IntroSide;
