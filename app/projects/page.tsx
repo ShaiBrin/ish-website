@@ -3,7 +3,7 @@ import React from 'react';
 import RightSide from '../ui/projects/rightside';
 import LeftSide from '../ui/projects/leftside';
 
-export default function ProjectsLayout(){
+export default function Projects(){
 
     return (
         <div className="flex flex-col h-screen">
