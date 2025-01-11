@@ -1,20 +1,19 @@
-import LeftSide from "./ui/home/leftSide";
-import RightSide from "./ui/home/rightSide";
+import IntroSide from "./ui/home/IntroSection";
+import ProfileSide from "./ui/home/ProfileSection";
 import profileData from "../data/profileData.json"
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen">
-        <div className="flex flex-grow pl-40  pt-10">
-            <div className={`flex-initial md:w-2/5 pr-10 hidden md:block`}>
-                <div className="w-full">
-                    <LeftSide profile={profileData}/>
-                </div>
+
+        <div className="flex justify-center md:pl-20 pt-10 px-4">
+          <div className={`flex flex-col pt-4 md:flex-row`}>
+            <div className={`md:w-2/5 order-2 md:order-1`}>
+              <IntroSide profile={profileData} />
             </div>
-            <div className={`flex-initial md:w-3/5 pr-10 pl-20`}>
-                <RightSide/>
+            <div className={`md:w-3/5 md:pl-40 order-1 md:order-2`}>
+              <ProfileSide />
             </div>
+          </div>
         </div>
-    </div>
 );
 }

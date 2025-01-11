@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const RightSide = () => {
+const ProfileSide = () => {
     return (
         <div className="flex flex-grow">
             <Image 
@@ -11,10 +11,9 @@ const RightSide = () => {
                   width={600} 
                   height={100} 
                   className="square-full shadow-lg transition-transform duration-300 opacity-100"
-
                 />
         </div>
     );
 };
 
-export default RightSide;
+export default ProfileSide;
