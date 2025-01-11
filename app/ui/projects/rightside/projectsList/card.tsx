@@ -2,47 +2,62 @@ import React from "react";
 import Card from "@mui/joy/Card";
 import Typography from "@mui/joy/Typography";
 import CardContent from "@mui/joy/CardContent";
+import Link from "next/link";
 
 interface BasicCardProps {
-  title: string;
-  subtitle: string;
-  description: string;
+  name: string;
   logo: string;
+  tech: string[];
+  description: string;
+  link: string;
 }
 
 const BasicCard: React.FC<BasicCardProps> = ({
-  title,
-  subtitle,
-  description,
+  name,
   logo,
+  tech,
+  description,
+  link
 }) => {
   return (
-    <Card variant="outlined" sx={{ maxWidth: 275, margin: "auto", borderRadius: "lg", boxShadow: "sm", "&:hover": { boxShadow: "md", },
-        overflow: "hidden",
-      }}
-    >
-      <img
-        src={logo}
-        alt={`${title} logo`}
-        style={{
-          height: 100,
-          objectFit: "contain",
-          display: "block",
+    <Link href={link} passHref  target="_blank">
+      <Card
+        variant="outlined"
+        sx={{
+          maxWidth: 275,
           margin: "auto",
+          borderRadius: "lg",
+          boxShadow: "sm",
+          "&:hover": {
+            boxShadow: "md",
+            cursor: "pointer", 
+          },
+          overflow: "hidden",
         }}
-      />
-      <CardContent>
-        <Typography level="h2" fontSize="lg" sx={{ mb: 0.5 }}>
-          {title}
-        </Typography>
-        <Typography>
-          {subtitle}
-        </Typography>
-        <Typography sx={{ mt: 1.5 }}>
-          {description}
-        </Typography>
-      </CardContent>
-    </Card>
+      >
+        <img
+          src={logo}
+          alt={`${name} logo`}
+          style={{
+            height: 70,
+            objectFit: "contain",
+            display: "block",
+            margin: "auto",
+          }}
+        />
+        <CardContent>
+          <Typography level="h3" sx={{ textAlign: "center" }}>
+            {name}
+          </Typography>
+          <Typography sx={{ mt: 1, fontWeight: "bold" }}>
+            {tech.join(" • ")}
+          </Typography>
+          <Typography sx={{ mt: 1 }}>
+            {description}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Link>
   );
 };
 

@@ -1,11 +1,10 @@
 'use client';
 import React from 'react';
 import ProjectsGrid from './projectsList/projects';
-import { Project } from '../../../types/projectTypes'
 import projectData from "../../../../data/projectData.json"
+import { Project } from '../../../types/projectTypes'
 
-const RightSide = React.memo(() => {
-
+const RightSide = () => {
     return (
         <div className="flex flex-grow">
             <div>
@@ -13,7 +12,7 @@ const RightSide = React.memo(() => {
             </div>
         </div>
     );
-});
+};
 
 RightSide.displayName = 'RightSide';
 
