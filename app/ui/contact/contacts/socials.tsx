@@ -9,7 +9,7 @@ interface SocialsProps {
     socials: Social[]; 
   }
 
-const Socials: React.FC<SocialsProps> = ({ socials }) => {
+const SocialsGrid: React.FC<SocialsProps> = ({ socials }) => {
   
   return (
     <Box sx={{ width: '100%' }}>
@@ -33,4 +33,4 @@ const Socials: React.FC<SocialsProps> = ({ socials }) => {
     </Box>
   );
 }
-export default Socials;
+export default SocialsGrid;

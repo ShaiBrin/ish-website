@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "../ui/contact/contactForm/email";
 import socialData from "../../data/socialData.json"
-import Socials from "../ui/contact/contacts/socials"
+import SocialsGrid from "../ui/contact/contacts/socials"
 import { Social } from "../types/socialTypes";
 
 export default function Contact() {
@@ -11,7 +11,7 @@ export default function Contact() {
             <ContactForm />
         </div>
         <div className="px-8 lg:ml-40 lg:mr-40 pt-14 w-full lg:w-1/2">
-            <Socials socials={socialData as Social[]} />
+            <SocialsGrid socials={socialData as Social[]} />
         </div>
     </div>
   );
