@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { JSX } from "react";
-import CloseIcon from '@mui/icons-material/Close';const Sidebar = ({
+import CloseIcon from '@mui/icons-material/Close';
+
+const Sidebar = ({
   isOpen,
   toggle,
 }: {
