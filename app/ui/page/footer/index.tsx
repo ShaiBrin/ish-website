@@ -12,7 +12,7 @@ interface SocialsProps {
 const Footer:React.FC<SocialsProps> = ({ socials }) => {
   return (
     <BottomNavigation
-    className="footer self-end dark:bg-white bg-zinc-900 px-0 py-2"
+    className="footer self-end dark:bg-white px-0 py-2"
     sx={{
         position: "fixed",
         bottom: 0,
@@ -27,7 +27,6 @@ const Footer:React.FC<SocialsProps> = ({ socials }) => {
       {socials.map((social, index) => (
         <BottomNavigationAction
          label={social.name}
-         
          icon = {
          <Link key={index} href={social.link} passHref target="_blank" rel="noopener noreferrer">
           <div className="hover:scale-110 hover:opacity-100 transition-transform transition-opacity duration-200 opacity-70">
