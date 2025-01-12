@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import Projects from '../ui/projects';
+import ProjectsList from '../ui/projects';
 
-export default function Project(){
+export default function Projects(){
     return (
       <div className="pr-20 pl-20">
-        <Projects/>
+        <ProjectsList/>
       </div>
     );
 }
