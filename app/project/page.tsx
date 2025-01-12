@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import RightSide from '../ui/projects/rightside';
+import Projects from '../ui/projects';
 
-export default function Projects(){
+export default function Project(){
     return (
       <div className="pr-20 pl-20">
-        <RightSide/>
+        <Projects/>
       </div>
     );
 }
