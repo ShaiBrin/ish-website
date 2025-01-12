@@ -3,13 +3,15 @@ import CloseIcon from '@mui/icons-material/Close';
 import Grid from '@mui/material/Grid2'
 import { Social } from "@/app/types/socialTypes";
 import Image from "next/image";
+import { Links } from "@/app/types/linkTypes";
 
 interface SidebarProps {
+  links: Links;
   socials: Social[];
   isOpen: boolean;
   toggle: () => void;
 }
-const Sidebar: React.FC<SidebarProps> = ({ socials, isOpen, toggle }) => {
+const Sidebar: React.FC<SidebarProps> = ({ links, socials, isOpen, toggle }) => {
   return (
   
       <div
@@ -27,26 +29,17 @@ const Sidebar: React.FC<SidebarProps> = ({ socials, isOpen, toggle }) => {
             />
 
         <ul className="sidebar-nav text-center leading-relaxed text-xl space-y-12 text-gray-400 pb mb-20">
-          <li>
-            <Link href="/work" onClick={toggle}>
-                <p className="cursor-pointer hover:text-black transition duration-200">Work</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects" onClick={toggle}>
-                <p className="cursor-pointer hover:text-black transition duration-200">Projects</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blogs" onClick={toggle}>
-                <p className="cursor-pointer hover:text-black transition duration-200">Blogs</p>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" onClick={toggle}>
-                <p className="cursor-pointer hover:text-black transition duration-200">Contact</p>
-            </Link>
-          </li>
+
+        {links.links.map((link) => {
+            const text = link.replace("/", "").charAt(0).toUpperCase() + link.slice(2);
+                return (
+                    <li key={link}>
+                        <Link href={link} onClick={toggle}>
+                        <p className="cursor-pointer hover:text-black transition duration-200">{text}</p>
+                        </Link>
+                    </li>
+                );
+              })} 
         </ul>
         
         <div className="w-full">

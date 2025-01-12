@@ -3,10 +3,16 @@ import Link from "next/link";
 import MenuIcon from '@mui/icons-material/Menu';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import { useState, useEffect } from "react";
-
-
-const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => {
+import { usePathname } from "next/navigation";
+import { Links } from "@/app/types/linkTypes";
+interface NavBarProps {
+    links: Links;
+    isOpen: boolean;
+    toggle: () => void;
+  }
+const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
     const [isMobile, setIsMobile] = useState(false);
+    const pathname = usePathname();
 
     // Effect hook to handle screen resizing
     useEffect(() => {
@@ -39,6 +45,7 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
     <div className="w-full h-20 text-black sticky top-0 font-sans ">
         <div className="max-w-7xl mx-auto px-500 h-full">
                 <div className="flex justify-between items-center h-full">
+                    
                     {/* Home Page Button */}
                     <Link href="/">
                         <PermIdentityIcon
@@ -57,44 +64,25 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
                         style={{ cursor: 'pointer' }}
                         />
                     )}
+                    
                     {/* Navbar Links */}
                     <ul className="hidden md:flex gap-x-16 text-gray-400">
-                    <li>
-                    <Link
-                        href="/work"
-                        >
-                        <p className="cursor-pointer hover:text-black transition duration-200">
-                            Work
-                        </p>
-                        </Link>
-                    </li>
-                    <li>
-                    <Link
-                        href="/project"
-                        >
-                        <p className="cursor-pointer hover:text-black transition duration-200">
-                            Projects
-                        </p>
-                    </Link>
-                    </li>
-                    <li>
-                    <Link
-                        href="/blogs"
-                        >
-                        <p className="cursor-pointer hover:text-black transition duration-200">
-                            Blogs
-                        </p>
-                    </Link>
-                    </li>
-                    <li>
-                    <Link
-                        href="/contact"
-                        >
-                        <p className="cursor-pointer hover:text-black transition duration-200">
-                            Contact
-                        </p>
-                    </Link>
-                    </li>
+                    {links.links.map((link) => {
+                    const text = link.replace("/", "").charAt(0).toUpperCase() + link.slice(2);
+                        return (
+                            <li key={link}>
+                                <Link href={link}>
+                                <p
+                                    className={`cursor-pointer transition duration-200 ${
+                                        pathname === link ? "text-black font-bold" : "hover:text-black"
+                                    }`}
+                                    >
+                                    {text}
+                                </p>
+                                </Link>
+                            </li>
+                        );
+                     })}  
                     </ul>
                 </div>
             </div>
