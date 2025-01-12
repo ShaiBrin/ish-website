@@ -4,7 +4,7 @@ import ProjectsGrid from './projectsList/projectCards';
 import projectData from "../../../data/projectData.json"
 import { Project } from '../../types/projectTypes'
 
-const Projects = () => {
+const ProjectsList = () => {
     return (
         <div className="flex flex-grow">
             <div>
@@ -14,7 +14,7 @@ const Projects = () => {
     );
 };
 
-Projects.displayName = 'RightSide';
+ProjectsList.displayName = 'RightSide';
 
-export default Projects;
+export default ProjectsList;
 
