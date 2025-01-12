@@ -40,7 +40,7 @@ const BasicWorkCard: React.FC<WorkCardProps> = ({
       >
         <img
           src={logo_path}
-          alt={`${name} logo`}
+          alt={`${company} logo`}
           style={{
             height: 70,
             objectFit: "contain",
