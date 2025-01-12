@@ -11,7 +11,7 @@ interface WorkExpTimelineProps {
 
 const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
   return (
-    <Timeline position="alternate">
+    <Timeline position="left">
       {jobData.map((job, index) => (
         <TimelineItem 
         key={index} 
@@ -19,7 +19,7 @@ const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
           m: 'auto 0',
           pr: index === 0 ? 4.9 : 0,
           '@media (min-width: 1418px)': {
-            pr: index === 0 ? '349px' : 0,
+            pl: index === 0 ? '368px' : 0,
           },
         }}
       
@@ -29,7 +29,11 @@ const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
             variant="body2"
             color="text.secondary"
           >
-            <Typography>{job.functions}</Typography>
+           {job.functions.map((desc, index) => (
+            <Typography key={index}>
+              • {desc}
+            </Typography>
+          ))}
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
