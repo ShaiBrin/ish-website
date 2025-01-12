@@ -1,6 +1,8 @@
 import IntroSide from "./ui/home/IntroSection";
 import ProfileSide from "./ui/home/ProfileSection";
 import profileData from "../data/profileData.json"
+import { Email } from "@mui/icons-material";
+import ContactForm from "./ui/contact/contactForm/email";
 
 export default function Home() {
   return (
@@ -13,8 +15,7 @@ export default function Home() {
           <ProfileSide />
         </div>
       </div>
-      <div >
-      </div>
+      
     </div>
 );
 }
