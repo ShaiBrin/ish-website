@@ -5,7 +5,7 @@ import { Job } from "../types/jobTypes";
 
 export default function Work() {
   return (
-    <div>
+    <div >
       <WorkExpTimeline jobData={jobData as Job[]} />
     </div>
   );
