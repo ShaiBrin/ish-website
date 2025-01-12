@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
 import Navigation from "./ui/page/navigation";
-import WorkExpTimeline from "./ui/work/timeline";
+import socialData from "../data/socialData.json"
+import Footer from "./ui/page/footer";
+import { Social } from "./types/socialTypes";
 
 export const metadata: Metadata = {
   title: "Ishraq Shabab",
@@ -19,8 +21,11 @@ export default function RootLayout({
         <div className="w-full">
           <Navigation/>
         </div>
-        <div className="pt-20"> 
+        <div className="pt-20 pb-20"> 
           {children}
+        </div>
+        <div className="hidden sm:block">
+          <Footer socials={socialData as Social[]} />
         </div>
       </body>
     </html>
