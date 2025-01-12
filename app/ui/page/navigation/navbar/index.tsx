@@ -70,7 +70,7 @@ const Navbar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => 
                     </li>
                     <li>
                     <Link
-                        href="/projects"
+                        href="/project"
                         >
                         <p className="cursor-pointer hover:text-black transition duration-200">
                             Projects
