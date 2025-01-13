@@ -6,4 +6,5 @@ export interface Job {
     functions: string[];
     tech_stack: string[];
     logo_path: string;
+    link: string;
 }
