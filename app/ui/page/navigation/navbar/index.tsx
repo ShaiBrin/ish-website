@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Links } from "@/app/types/linkTypes";
 import { Social } from '@/app/types/socialTypes';
+import { Email } from '@mui/icons-material';
+
 import Image from "next/image";
 
 interface NavBarProps {
@@ -60,27 +62,34 @@ const Navbar: React.FC<NavBarProps> = ({ links, socials, isOpen, toggle }) => {
                     </Link>
 
                     <ul className="hidden md:flex gap-x-8 ml-6 text-gray-400">
-                        {socials.map((social, index) => (
-                            <li key={index}>
-                                <Link
-                                    href={social.link}
-                                    passHref
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <div className="hover:scale-110 hover:opacity-100 transition-transform transition-opacity duration-200 opacity-70">
-                                        <Image
-                                            src={social.image}
-                                            alt={social.name}
-                                            width={40}
-                                            height={40}
-                                            style={{ borderRadius: '50%' }}
-                                            className="filter grayscale hover:filter-none transition-all duration-200"
-                                        />
-                                    </div>
-                                </Link>
-                            </li>
-                        ))}
+                    {socials.map((social, index) => (
+                        <li key={index}>
+                        <Link
+                            href={social.link}
+                            passHref
+                            target={social.name === "Mail" ? undefined : "_blank"}
+                            rel={social.name === "Mail" ? undefined : "noopener noreferrer"}
+                        >
+                            <div className="hover:scale-110 hover:opacity-100 transition-transform transition-opacity duration-200 opacity-70 flex items-center">
+                            {social.name === "Mail" ? (
+                                <Email
+                                className="text-gray-700 hover:text-blue-500"
+                                style={{ fontSize: 40 }}
+                                />
+                            ) : (
+                                <Image
+                                src={social.image}
+                                alt={social.name}
+                                width={40}
+                                height={40}
+                                style={{ borderRadius: '50%' }}
+                                className="filter grayscale hover:filter-none transition-all duration-200"
+                                />
+                            )}
+                            </div>
+                        </Link>
+                        </li>
+                    ))}
                     </ul>
 
                     {/* Hamburger Menu*/}
