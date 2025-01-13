@@ -5,12 +5,16 @@ import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Links } from "@/app/types/linkTypes";
+import { Social } from '@/app/types/socialTypes';
+import Image from "next/image";
+
 interface NavBarProps {
     links: Links;
+    socials: Social[];
     isOpen: boolean;
     toggle: () => void;
   }
-const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
+const Navbar: React.FC<NavBarProps> = ({ links, socials, isOpen, toggle }) => {
     const [isMobile, setIsMobile] = useState(false);
     const pathname = usePathname();
 
@@ -54,6 +58,29 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
                             }`}
                         />
                     </Link>
+
+                    <ul className="hidden md:flex gap-x-8 ml-6 text-gray-400">
+                        {socials.map((social, index) => (
+                            <li key={index}>
+                            <Link
+                                href={social.link}
+                                passHref
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <div className="hover:scale-110 hover:opacity-100 transition-transform transition-opacity duration-200 opacity-70">
+                                    <Image
+                                        src={social.image}
+                                        alt={social.name}
+                                        width={40}
+                                        height={40}
+                                        style={{ borderRadius: '50%' }}
+                                    />
+                                </div>
+                            </Link>
+                        </li>
+                        ))}
+                    </ul>
 
                     {/* Hamburger Menu*/}
                     {isMobile && (

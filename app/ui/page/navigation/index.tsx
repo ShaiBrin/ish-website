@@ -15,7 +15,7 @@ const Navigation = () => {
   return (
     <>
       <Sidebar  links={linksData as Links} socials={socialData as Social[]} isOpen={isOpen} toggle={toggle} />
-      <Navbar links={linksData as Links} isOpen={isOpen} toggle={toggle} />
+      <Navbar links={linksData as Links} socials={socialData as Social[]} isOpen={isOpen} toggle={toggle} />
     </>
   );
 };
