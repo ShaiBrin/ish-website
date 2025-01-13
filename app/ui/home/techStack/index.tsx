@@ -1,48 +1,28 @@
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import Image from 'next/image';
-import { Typography } from '@mui/material';
 import { Tech } from '@/app/types/progTypes';
+import SkillSet from './stack';
+import prog from "../../../../data/progData.json"
+import tools from "../../../../data/toolsData.json"
+import frameworks from "../../../../data/frameworksData.json"
+import database from "../../../../data/databaseData.json"
 
+const ResponsiveStack = () => {
 
-interface ProgInterface {
-  prog: Tech[];
-  text: string
-}
-const ResponsiveStack: React.FC<ProgInterface> = ({ prog, text }) => {
+  const skillSets = [
+    { data: prog, label: "Languages" },
+    { data: frameworks, label: "Frameworks & Libraries" },
+    { data: database, label: "Database" },
+    { data: tools, label: "Tools" },
+  ];
 
-    return (
-
-      <div>
-        <Typography 
-          variant="h4" 
-          gutterBottom
-          className="font-semibold text-2xl text-gray-800 italic mb-6 text-center md:text-left"
-        >
-          {text}
-      </Typography>
-        <div>
-        <Stack
-  direction={{ xs: 'row', sm: 'row', md: 'row' }}
-  spacing={{ xs: 2, sm: 2, md: 4 }}
-  justifyContent={{ xs: 'center', sm: 'start', md: 'start' }} // Centers on small screens
->
-  {prog.map((tech, index) => (
-    <div key={index} className="flex flex-col items-center group">
-      <Image
-        className="w-10 h-10 object-contain transition-transform duration-300 transform group-hover:scale-110"
-        src={tech.image}
-        alt={`${tech.name} logo`}
-        width={700}
-        height={700}
-        style={{ borderRadius: '50%' }}
-      />
-      <span className="mt-2 text-sm">{tech.name}</span>
-    </div>
-  ))}
-</Stack>
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8 pt-4">
+      {skillSets.map((skill, index) => (
+        <div key={index} className="flex flex-col">
+          <SkillSet prog={skill.data as Tech[]} text={skill.label} />
         </div>
-      </div>
-    );
+      ))}
+    </div>
+  );
 }
 export default ResponsiveStack;
