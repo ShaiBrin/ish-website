@@ -1,30 +1,47 @@
 import * as React from 'react';
-import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
+import Image from 'next/image';
+import { Typography } from '@mui/material';
+import { Tech } from '@/app/types/progTypes';
 
-// const Item = styled(Paper)(({ theme }) => ({
-//   backgroundColor: '#fff',
-//   ...theme.typography.body2,
-//   padding: theme.spacing(1),
-//   textAlign: 'center',
-//   color: theme.palette.text.secondary,
-//   ...theme.applyStyles('dark', {
-//     backgroundColor: '#1A2027',
-//   }),
-// }));
 
-export default function ResponsiveStack() {
+interface ProgInterface {
+  prog: Tech[];
+  text: string
+}
+const ResponsiveStack: React.FC<ProgInterface> = ({ prog, text }) => {
+
     return (
+
       <div>
-        <Stack
-          direction={{ xs: 'column', sm: 'row' }}
-          spacing={{ xs: 1, sm: 2, md: 4 }}
+        <Typography 
+          variant="h4" 
+          gutterBottom
+          className="font-semibold text-2xl text-gray-800 italic mb-6"
         >
-          <>Item 1</>
-          <>Item 2</>
-          <>Item 3</>
-        </Stack>
+          {text}
+      </Typography>
+        <div>
+          <Stack
+          direction={{ xs: 'row', sm: 'row', md: 'row' }} 
+          spacing={{ xs: 2, sm: 2, md: 4 }} 
+        >
+              {prog.map((tech, index) => (
+              <div key={index} className="flex flex-col items-center group">
+                <Image
+                  className="w-10 h-10 object-contain transition-transform duration-300 transform group-hover:scale-110"
+                  src={tech.image}
+                  alt={`${tech.name} logo`}
+                  width={700}
+                  height={700}
+                  style={{ borderRadius: '50%' }}
+                />
+              <span className="mt-2 text-sm">{tech.name}</span>
+            </div>
+            ))}
+          </Stack>
+        </div>
       </div>
     );
-  }
+}
+export default ResponsiveStack;

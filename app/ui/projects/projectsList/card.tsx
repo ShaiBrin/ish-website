@@ -3,7 +3,7 @@ import Card from "@mui/joy/Card";
 import Typography from "@mui/joy/Typography";
 import CardContent from "@mui/joy/CardContent";
 import Link from "next/link";
-
+import Image from "next/image";
 interface BasicCardProps {
   name: string;
   logo: string;
@@ -35,11 +35,12 @@ const BasicCard: React.FC<BasicCardProps> = ({
           overflow: "hidden",
         }}
       >
-        <img
+        <Image
           src={logo}
           alt={`${name} logo`}
+          width={70} 
+          height={70}
           style={{
-            height: 70,
             objectFit: "contain",
             display: "block",
             margin: "auto",
