@@ -73,7 +73,7 @@ const Navbar: React.FC<NavBarProps> = ({ links, socials, isOpen, toggle }) => {
                             <div className="hover:scale-110 hover:opacity-100 transition-transform transition-opacity duration-200 opacity-70 flex items-center">
                             {social.name === "Mail" ? (
                                 <Email
-                                className="text-gray-700 hover:text-blue-500"
+                                className="text-gray-700 hover:text-red-500"
                                 style={{ fontSize: 40 }}
                                 />
                             ) : (

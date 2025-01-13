@@ -56,7 +56,7 @@ const Sidebar: React.FC<SidebarProps> = ({ links, socials, isOpen, toggle }) => 
                 <div className="hover:scale-110 hover:opacity-100 transition-transform transition-opacity duration-200 opacity-70">
                 {social.name === "Mail" ? (
                                 <Email
-                                className="text-gray-700 hover:text-blue-500"
+                                className="text-gray-700 hover:text-red-500"
                                 style={{ fontSize: 50 }}
                                 />
                             ) : (
