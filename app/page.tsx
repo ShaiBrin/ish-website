@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="flex md:pl-20 pt-10 px-4">
       <div className="flex-row md:flex-row">
-        <div className={`flex flex-col pt-4 md:flex-row`}>
+        <div className={`flex flex-col pt-4 md:flex-row pb-10`}>
           <div className={`md:w-2/5 order-2 md:order-1`}>
             <IntroSide profile={profileData} />
           </div>
@@ -21,17 +21,17 @@ export default function Home() {
             <ProfileSide />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8">
-          <div className="flex flex-col pt-4 pb-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8  pt-4 pb-5">
+          <div className="flex flex-col">
           <ResponsiveStack prog={prog as Tech[]} text={"Languages"}  />
           </div>
-          <div className="flex flex-col pt-4 pb-5">
+          <div className="flex flex-col">
           <ResponsiveStack prog={frameworks as Tech[]} text={"Frameworks & Libraries"}  />
           </div>
-          <div className="flex flex-col pt-4 pb-5">
+          <div className="flex flex-col">
           <ResponsiveStack prog={database as Tech[]} text={"Database"}  />
           </div>
-          <div className="flex flex-col pt-4 pb-5">
+          <div className="flex flex-col">
             <ResponsiveStack prog={tools as Tech[]} text={"Tools"}  />
           </div>
         </div>
