@@ -16,7 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ links, socials, isOpen, toggle }) => 
   return (
   
       <div
-        className="sidebar-container bg-white-100 fixed w-full h-full overflow-hidden flex flex-col justify-center items-center right-0 z-10 transition-transform duration-300"
+        className="sidebar-container bg-white-100 fixed w-full h-full overflow-hidden flex flex-col items-center right-0 z-10 transition-transform duration-300 pt-40"
         style={{
           transform: `${isOpen ? "translateX(0)" : "translateX(100%)"}`,
           backgroundColor: "white",
@@ -29,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({ links, socials, isOpen, toggle }) => 
             onClick={toggle} 
             />
 
-        <ul className="sidebar-nav text-center leading-relaxed text-xl space-y-12 text-gray-400 pb mb-20">
+        <ul className="sidebar-nav text-center leading-relaxed text-xl space-y-12 text-gray-400 mb-20">
 
         {links.links.map((link) => {
             const text = link.replace("/", "").charAt(0).toUpperCase() + link.slice(2);
@@ -43,7 +43,7 @@ const Sidebar: React.FC<SidebarProps> = ({ links, socials, isOpen, toggle }) => 
               })} 
         </ul>
         
-        <div className="w-full pl-5 pr-5">
+        <div className="w-full px-5">
           <Grid container rowSpacing={0} columnSpacing={{ xs: 3, sm: 2, md: 3 }} justifyContent="center">
             {socials.map((social, index) => (
               <Grid  key={index}>
