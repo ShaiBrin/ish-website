@@ -1,8 +1,6 @@
 import IntroSide from "./ui/home/IntroSection";
 import ProfileSide from "./ui/home/ProfileSection";
 import profileData from "../data/profileData.json"
-import { Email } from "@mui/icons-material";
-import ContactForm from "./ui/contact/contactForm/email";
 import ResponsiveStack from "./ui/home/techStack";
 import prog from "../data/progData.json"
 import tools from "../data/toolsData.json"

@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid2'
 import { Social } from "@/app/types/socialTypes";
 import Image from "next/image";
 import { Links } from "@/app/types/linkTypes";
+import { Email } from '@mui/icons-material';
 
 interface SidebarProps {
   links: Links;
@@ -42,19 +43,30 @@ const Sidebar: React.FC<SidebarProps> = ({ links, socials, isOpen, toggle }) => 
               })} 
         </ul>
         
-        <div className="w-full">
-          <Grid container rowSpacing={0} columnSpacing={{ xs: 4, sm: 2, md: 3 }} justifyContent="center">
+        <div className="w-full pl-5 pr-5">
+          <Grid container rowSpacing={0} columnSpacing={{ xs: 3, sm: 2, md: 3 }} justifyContent="center">
             {socials.map((social, index) => (
               <Grid  key={index}>
-                <Link href={social.link} passHref target="_blank" rel="noopener noreferrer">
+                <Link
+                    href={social.link}
+                    passHref
+                    target={social.name === "Mail" ? undefined : "_blank"}
+                    rel={social.name === "Mail" ? undefined : "noopener noreferrer"}
+                >
                 <div className="hover:scale-110 hover:opacity-100 transition-transform transition-opacity duration-200 opacity-70">
+                {social.name === "Mail" ? (
+                                <Email
+                                className="text-gray-700 hover:text-blue-500"
+                                style={{ fontSize: 50 }}
+                                />
+                            ) : (
                 <Image
                       src={social.image}
                       alt={social.name}
                       width={50}
                       height={50}
                       style={{ borderRadius: "50%" }}
-                    />
+                    />)}
                   </div>
                 </Link>
               </Grid>
