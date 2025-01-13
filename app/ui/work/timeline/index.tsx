@@ -4,6 +4,7 @@ import { Timeline, TimelineItem, TimelineOppositeContent, TimelineSeparator, Tim
 import Typography from '@mui/material/Typography';
 import { Job } from '@/app/types/jobTypes';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface WorkExpTimelineProps {
   jobData: Job[]; 
@@ -13,6 +14,7 @@ const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
   return (
     <Timeline position="left">
       {jobData.map((job, index) => (
+        
         <TimelineItem 
         key={index} 
         sx={{
@@ -37,15 +39,17 @@ const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
-              <TimelineDot className="timeline-dot">
-                <Image 
-                  src={job.logo_path} 
-                  alt={`${job.company} logo`} 
-                  width={700} 
-                  height={700} 
-                  className="timeline-dot-img"
-                />
-              </TimelineDot>
+                <TimelineDot className="timeline-dot">
+                <Link href={job.link} passHref  target="_blank">
+                  <Image 
+                    src={job.logo_path} 
+                    alt={`${job.company} logo`} 
+                    width={700} 
+                    height={700} 
+                    className="timeline-dot-img"
+                  />
+                  </Link>
+                </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent sx={{ px: 2 }}>
@@ -56,6 +60,7 @@ const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
             <Typography variant="body2">{job.dates}</Typography>
           </TimelineContent>
         </TimelineItem>
+        
       ))}
     </Timeline>
   );

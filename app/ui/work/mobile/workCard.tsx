@@ -26,6 +26,7 @@ const WorkGrid: React.FC<ExpProps> = ({ workExp }) => {
                 functions = {work.functions}
                 tech_stack = {work.tech_stack}
                 logo = {work.logo_path}
+                link = {work.link}
               />
           </Grid>
         ))}

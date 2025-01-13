@@ -3,7 +3,7 @@ import Card from "@mui/joy/Card";
 import Typography from "@mui/joy/Typography";
 import CardContent from "@mui/joy/CardContent";
 import Link from "next/link";
-
+import Image from "next/image";
 interface WorkCardProps {
     job_title:string;
     company: string;
@@ -11,7 +11,8 @@ interface WorkCardProps {
     location: string;
     functions: string[];
     tech_stack: string[];
-    logo: string
+    logo: string;
+    link:string
 }
 
 const BasicWorkCard: React.FC<WorkCardProps> = ({
@@ -21,9 +22,11 @@ const BasicWorkCard: React.FC<WorkCardProps> = ({
     location,
     functions,
     tech_stack,
-    logo: logo_path
+    logo,
+    link
 }) => {
   return (
+    <Link href={link} passHref  target="_blank">
       <Card
         variant="outlined"
         sx={{
@@ -38,11 +41,12 @@ const BasicWorkCard: React.FC<WorkCardProps> = ({
           overflow: "hidden",
         }}
       >
-        <img
-          src={logo_path}
+        <Image
+          src={logo}
           alt={`${company} logo`}
+          width={70} 
+          height={70} 
           style={{
-            height: 70,
             objectFit: "contain",
             display: "block",
             margin: "auto",
@@ -125,6 +129,7 @@ const BasicWorkCard: React.FC<WorkCardProps> = ({
             </Typography>
         </CardContent>
       </Card>
+      </Link>
   );
 };
 
