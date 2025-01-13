@@ -1,9 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Navigation from "./ui/page/navigation";
-import socialData from "../data/socialData.json"
 import Footer from "./ui/page/footer";
-import { Social } from "./types/socialTypes";
 
 export const metadata: Metadata = {
   title: "Ishraq Shabab",
@@ -25,7 +23,7 @@ export default function RootLayout({
           {children}
         </div>
         <div className="hidden sm:block">
-          <Footer socials={socialData as Social[]} />
+          <Footer/>
         </div>
       </body>
     </html>
