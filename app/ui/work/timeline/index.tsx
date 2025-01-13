@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Timeline, TimelineItem, TimelineOppositeContent, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
-
 import Typography from '@mui/material/Typography';
 import { Job } from '@/app/types/jobTypes';
 import Image from 'next/image';
@@ -17,14 +16,6 @@ const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
         
         <TimelineItem 
         key={index} 
-        sx={{
-          m: 'auto 0',
-          pr: index === 0 ? 4.9 : 0,
-          '@media (min-width: 1418px)': {
-            pl: index === 0 ? '368px' : 0,
-          },
-        }}
-      
       >
             <TimelineOppositeContent key ={index}
             sx={{ m: 'auto 0' }}

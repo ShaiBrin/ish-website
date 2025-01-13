@@ -1,12 +1,15 @@
+'use client';
 import React from "react";
 import WorkExpTimeline from "../ui/work/timeline";
 import jobData from "../../data/jobData.json"
-import { Job } from "../types/jobTypes";
 import WorkGrid from "../ui/work/mobile/workCard";
+import AnimatedPage from "../ui/animation";
+import { Job } from "../types/jobTypes";
 
 
 export default function Work() {
   return (
+    <AnimatedPage>
     <div >
       <div className="block md:hidden">
         <div className="flex flex-grow pr-20 pl-20">
@@ -17,5 +20,6 @@ export default function Work() {
         <WorkExpTimeline jobData={jobData as Job[]} />
       </div>
     </div>
+    </AnimatedPage>
   );
 }

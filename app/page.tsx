@@ -2,8 +2,10 @@ import IntroSide from "./ui/home/IntroSection";
 import ProfileSide from "./ui/home/ProfileSection";
 import profileData from "../data/profileData.json"
 import ResponsiveStack from "./ui/home/techStack";
+import AnimatedPage from "./ui/animation";
 export default function Home() {
   return (
+    <AnimatedPage>
     <div className="flex md:pl-20 pt-10 px-4">
       <div className="flex-row md:flex-row">
         <div className={`flex flex-col pt-4 md:flex-row pb-10`}>
@@ -19,5 +21,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </AnimatedPage>
 );
 }
