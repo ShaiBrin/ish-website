@@ -29,7 +29,7 @@ const Footer:React.FC<SocialsProps> = ({ socials }) => {
          label={social.name}
          icon = {
          <Link key={index} href={social.link} passHref target="_blank" rel="noopener noreferrer">
-          <div className="hover:scale-110 hover:opacity-100 transition-transform transition-opacity duration-200 opacity-70">
+          <div className="hover:scale-110 hover:opacity-100 transition-transform transition-opacity duration-200 opacity-7">
             <Image
               src={social.image}
               alt={social.name}
