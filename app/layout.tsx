@@ -22,7 +22,7 @@ export default function RootLayout({
         <div className="pt-20 pb-20"> 
           {children}
         </div>
-        <div className="hidden sm:block">
+        <div>
           <Footer/>
         </div>
       </body>
