@@ -10,7 +10,7 @@ const ProfileSide = () => {
                   alt={'profile'}
                   width={600} 
                   height={100} 
-                  className="square-full shadow-lg transition-transform duration-300 opacity-100"
+                  className="square-full duration-300 opacity-100"
                 />
         </div>
     );
