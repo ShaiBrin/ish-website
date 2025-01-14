@@ -8,10 +8,25 @@ import Link from 'next/link';
 interface WorkExpTimelineProps {
   jobData: Job[]; 
 }
+const highlightTerms = ['Gatsby', 'Typescript', 'Kotlin','SQL','GraphQL', 'Hubspot API', 'Python', 'TDD', 'Pytest','AWS', 'Swift', 'Agile', ' CI/CD','PowerShell', 'X++', 'OWASP','DAO', 'API'];
 
+const highlightText = (text: string) => {
+  // Split the text into words and apply bold styling to the target terms
+  return text.split(' ').map((word, index) => {
+    // If the word is one of the target terms, make it bold
+    const isTargetTerm = highlightTerms.some(term => word.includes(term));
+    return isTargetTerm ? (
+      <Typography key={index} component="span" sx={{ fontWeight: 'bold' }}>
+        {word + ' '}
+      </Typography>
+    ) : (
+      <span key={index}>{word + ' '}</span>
+    );
+  });
+};
 const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
   return (
-    <Timeline position="left">
+    <Timeline position="alternate">
       {jobData.map((job, index) => (
         
         <TimelineItem 
@@ -24,7 +39,7 @@ const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
           >
            {job.functions.map((desc, index) => (
             <Typography key={index}>
-              • {desc}
+              • {highlightText(desc)}
             </Typography>
           ))}
           </TimelineOppositeContent>
