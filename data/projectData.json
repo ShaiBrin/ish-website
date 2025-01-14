@@ -1,0 +1,67 @@
+[
+    {
+      "name": "MediMind",
+      "logo": "/palantir.webp",
+      "tech": ["Pipeline Builder", "Workshop Module", "Ontology", "AIP Function Logic","Compute Modules", "OSDK"],
+      "premise":"Doctors waste time on bureaucracy and sorting patients' medical information.",
+      "description": "Mission critical platform that classify structured medical information extracted from raw patient notes data while calculating the total medication cost per patient.",
+      "link": "https://github.com/ShaiBrin/Palantir-MediMind"
+    },
+    {
+      "name": "VeloSure",
+      "logo": "/palantir.webp",
+      "tech" : ["Pipeline Builder", "Ontology", "AIP Function Logic"],
+      "premise":"As a cyclist, what is the best time to ride your bike in a specific bike lane?",
+      "description": "Palantir Foundry application that determines safe bike paths while taking into account historical intoxicated road accidents.",
+      "link": "https://x.com/ishr_shai/status/1847370321692877007"
+    },
+    {
+      "name": "Classification",
+      "logo": "/jupyter.webp",
+      "tech" : ["Tensorflow", "scikit-learn","Jupyter", "k-Means"],
+      "premise":"Leveraging machine learning in order to classify and determining people's emotions based on their facial expressions.",
+      "description":"SVM and SVR algorithms provide the ability to classify different emotions, apply regression, and perform clustering.",
+      "link": "https://github.com/ShaiBrin/Classification/tree/main"
+  },
+    {
+      "name": "Natural Language Processing",
+      "logo": "/python.webp",
+      "tech" : ["Python", "NLP", "NLTK"],
+      "premise":"Machine learning can be leveraged in order to solve a puzzle.",
+      "description": "Clue Game that leverages natural language processing by receiving both audio and text input from the user to identify the culprit.",
+      "link": "https://github.com/ShaiBrin/Clue-NLP/tree/main/Code"
+    },
+    {
+      "name": "merMaid",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+      "tech" : ["Typescript", "NextJS","Tailwind", "PostgreSQL", "Redux"],
+      "premise":"Clients rely on either agencies or independent workers, without having a central registry to rate their services and validate their credentials.",
+      "description": "Uberization of maid services based on location, services provided and ratings. The application uses Redux and postgreSQL.",
+      "link": "https://github.com/ShaiBrin/mermaid"
+    },
+    {
+        "name": "BChainCovid19",
+        "logo": "/kotlin.webp",
+        "tech" : ["Kotlin", "Firestore", "MVVM"],
+        "premise":"There is no assurance that a central entity won't forge or falsify the number of vaccines registered in a given society.",
+        "description": "An Android application that decentralizes people's COVID-19 vaccines by storing them in a blockchain in Firestore as a registry, while simultaneously keeping users' data anonymous.",
+        "link": "https://github.com/ShaiBrin/BChainCovid19Vaccine"
+    },
+    {
+        "name": "Chess Game",
+        "logo": "/java.webp",
+        "tech" : ["Java", "JVM", "OOP", "Design Patterns"],
+        "premise":"Maximising OOP concepts and applying design patterns such as Factory, Abstract, Singleton.",
+        "description": "Java application built from scracth that displays a chess game while using OOP and JVM.",
+        "link": "https://github.com/ShaiBrin/Chess"
+    },
+    {
+        "name": "GrabCut",
+        "logo": "/c.webp",
+        "tech" : ["Matlab", "C"],
+        "premise":"It is difficult to identify similar objects when exposed to different backgrounds, such as variations in color, shadows, and noise.",
+        "description": "A MATLAB project that implements the GrabCut algorithm to identify and classify objects.",
+        "link": "https://github.com/ShaiBrin/GrabCut"
+    }
+  ]
+  

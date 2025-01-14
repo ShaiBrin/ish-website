@@ -2,7 +2,7 @@
 import React from 'react';
 import ProjectsGrid from './projectsList/projectCards';
 import projectData from "../../../data/projectData.json"
-import { Project } from '../../types/projectTypes'
+import { Project } from "@/app/types/";
 
 const ProjectsList = () => {
     return (

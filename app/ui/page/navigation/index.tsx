@@ -4,8 +4,8 @@ import Navbar from "./navbar";
 import Sidebar from "./sidebar";
 import socialData from "../../../../data/socialData.json"
 import linksData from "../../../../data/linksData.json"
-import { Social } from "@/app/types/socialTypes";
-import { Links } from "@/app/types/linkTypes";
+import { Social, Links } from "@/app/types/";
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 

@@ -1,0 +1,111 @@
+[
+  {
+    "name": "Languages",
+      "items": [
+      {
+        "tech": "Python",
+        "image": "/python.webp"
+      },
+      {
+        "tech": "Typescript",
+        "image": "/typescript.webp"
+      },
+      {
+        "tech": "Java",
+        "image": "/java.webp"
+      },
+      {
+        "tech": "Kotlin",
+        "image": "/kotlin.webp"
+      },
+      {
+        "tech": "Swift",
+        "image": "/swift.webp"
+      },
+      {
+        "tech": "C++",
+        "image": "/c.webp"
+      }
+    ]
+  },
+  {
+    "name": "Frameworks & Libraries",
+      "items": [
+        {
+          "tech": "TensorFlow",
+          "image": "/tensorflow.webp"
+        },
+        {
+          "tech": "Scikit Learn",
+          "image": "/scikit.webp"
+        },
+        {
+          "tech": "Numpy",
+          "image": "/numpy.webp"
+        },
+        {
+          "tech": "React",
+          "image": "/react.webp"
+        },
+        {
+          "tech": "Next.js",
+          "image": "/next.webp"
+        },
+        {
+          "tech": "Redux",
+          "image": "/redux.webp"
+        },
+        {
+          "tech": "Tailwind",
+          "image": "/tailwind.webp"
+        },
+        {
+          "tech": "Gatsby",
+          "image": "/gatsby.webp"
+        }   
+      ]
+  },
+  {
+    "name": "Database",
+      "items":[
+        {
+          "tech": "PostgreSQL",
+          "image": "/posgresql.webp"
+        },
+        {
+          "tech": "GraphQL",
+          "image": "/graphql.webp"
+        },
+        {
+          "tech": "Firebase",
+          "image": "/firebase.webp"
+        }
+      ]
+  },
+  {
+    "name": "Tools",
+      "items":[
+        {
+          "tech": "Jupyter",
+          "image": "/jupyter.webp"
+        },
+        {
+          "tech": "Node",
+          "image": "/node.webp"
+        },
+        {
+          "tech": "AWS",
+          "image": "/aws.webp"
+        },
+        {
+          "tech": "Git",
+          "image": "/git.webp"
+        },
+        {
+          "tech": "Docker",
+          "image": "/docker.webp"
+        }
+      ]
+  }
+]
+  

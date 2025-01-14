@@ -1,6 +1,6 @@
 "use client";
 import { Box } from "@mui/material";
-import { Project } from "@/app/types/projectTypes";
+import { Project } from "@/app/types";
 import Grid from "@mui/material/Grid2";
 import BasicCard from "./card"; 
 

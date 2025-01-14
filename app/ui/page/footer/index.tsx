@@ -1,7 +1,5 @@
 import React from "react";
 import { BottomNavigation, BottomNavigationAction } from "@mui/material";
-import { Social } from '@/app/types/socialTypes';
-
 
 const Footer = () => {
   return (

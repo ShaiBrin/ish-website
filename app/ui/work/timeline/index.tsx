@@ -1,10 +1,10 @@
 import React from 'react';
 import { Timeline, TimelineItem, TimelineOppositeContent, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
 import Typography from '@mui/material/Typography';
-import { Job } from '@/app/types/jobTypes';
+import { Job } from '@/app/types';
 import Image from 'next/image';
-import Link from 'next/link';
 import HighlightText from '@/app/functions/highlights';
+import Link from "next/link";
 
 interface WorkExpTimelineProps {
   jobData: Job[];

@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Mail",
+    "link": "mailto:Ishr_shai@live.ca",
+    "image": ""
+  },  
+  {
+      "name": "Linkedin",
+      "link": "https://www.linkedin.com/in/ishraq-sha/",
+      "image": "/linkedin.png"
+    },
+    {
+      "name": "Github",
+      "link": "https://github.com/ShaiBrin",
+      "image": "/github.svg"
+    },
+    {
+      "name": "X",
+      "link": "https://x.com/ishr_shai",
+      "image": "/X.jpg"
+    },
+    {
+      "name": "Medium",
+      "link": "https://medium.com/@ishr_shai",
+      "image": "/medium.webp"
+    }
+  ]
+  

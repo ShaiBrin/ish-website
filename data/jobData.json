@@ -1,0 +1,129 @@
+[
+    {
+      "job_title": "Mobile Developer",
+      "company": "Mentallys",
+      "dates": "May 2024 – Dec 2024",
+      "location": "Montreal, QC",
+      "functions": [
+        "Developed 5 fragments, 10 views and 10 viewModels using MVVM and Kotlin Jetpack compose",
+        "Added 5 directions towards new fragments in the navigation file",
+        "Successfully made 3 API calls with Swagger API provider with DAO and repository patterns"
+      ],
+      "tech_stack": [
+        "MVVM",
+        "Jetpack Compose",
+        "Swagger API",
+        "DAO",
+        "Repository Pattern"
+      ],
+      "logo_path": "/mentallys.jpeg",
+      "link": "https://mentallys.com/en"
+    },
+    {
+      "job_title": "Full Stack Developer",
+      "company": "Thirdbridge",
+      "dates": "Jan 2024 – May 2024",
+      "location": "Montreal, QC",
+      "functions": [
+        "Augmented new users visits by 35% by ensuring SEO indexation by creating static pages at built time for all of the website’s 15 pages with GraphQL queries in Typescript by using Gatsby’s plugin",
+        "Added 5 new meta data on each page by leveraging Gatsby Head API",
+        "Increased new users visits counts by 25% by harnessing Gatsby’s Script and Hubspot API in order to collect data on user behaviors such as the number of visits"
+      ],
+      "tech_stack": [
+        "Typescript",
+        "GraphQL",
+        "Gatsby",
+        "Gatsby Head API",
+        "Gatsby Script",
+        "Hubspot API"
+      ],
+      "logo_path": "/thirdbridge.png",
+      "link": "https://t-b.ca/en"
+
+    },
+    {
+      "job_title": "Software Developer Engineer",
+      "company": "Amazon (AWS)",
+      "dates": "May 2022 – Aug 2022",
+      "location": "Vancouver, B.C.",
+      "functions": [
+        "Built a CLI tool in Python that validates 100% of all different types of schema and value errors of customers personalized job templates files in yaml or json format and developed the front-end using Typescript",
+        "Implemented 2 commands (run&execute) with user parameters as inputs job template using TDD in Pytest and unit tested all 8 functions using internal tools like brazil and peru",
+        "Configured the required files with AWS CodePipeline in order to deploy the tool in the rendering service"
+      ],
+      "tech_stack": [
+        "Python",
+        "Typescript",
+        "Pytest",
+        "TDD",
+        "AWS CodePipeline",
+        "Brazil",
+        "Peru"
+      ],
+      "logo_path": "/amazon.webp",
+      "link": "https://www.amazon.com/"
+
+    },
+    {
+      "job_title": "Mobile Developer",
+      "company": "Desjardins Group",
+      "dates": "Jan 2022 – Apr 2022",
+      "location": "Montreal, QC",
+      "functions": [
+        "Enhanced user’s interface clarity on the main page by refactoring the visuals of 7 different messages in different Swift components",
+        "Upgraded the UI of the account’s page by adding 5 new visual components by using Swift UI library and Figma",
+        "Performed Swift code reviews alongside mobile team and worked in Agile"
+      ],
+      "tech_stack": [
+        "Swift",
+        "Swift UI",
+        "Figma",
+        "Git"
+      ],
+      "logo_path": "/desjardins.png",
+      "link": "https://www.desjardins.com/qc/en.html"
+
+    },
+    {
+      "job_title": "DevOps Developer",
+      "company": "Desjardins Group",
+      "dates": "May 2021 – Dec 2021",
+      "location": "Montreal, QC",
+      "functions": [
+        "Automated 2 commands by fabricating 2 CI/CD pipelines in Python yaml in the Fly Concourse environment",
+        "Ensured the validity of the pipelines by debugging and using fly concourse commands in PowerShell",
+        "Incentive the company’s comprehension of risk mitigation from cyber threats by publishing new OWASP policies"
+      ],
+      "tech_stack": [
+        "Python",
+        "CI/CD",
+        "Fly Concourse",
+        "PowerShell",
+        "OWASP"
+      ],
+      "logo_path": "/desjardins.png",
+      "link": "https://www.desjardins.com/qc/en.html"
+
+    },
+    {
+      "job_title": "Software Engineer in Test",
+      "company": "Genetec",
+      "dates": "May 2019 – Dec 2019",
+      "location": "Montreal, QC",
+      "functions": [
+        "Automated repetitive purchase order tasks by creating 15 automated tests in X++ using Microsoft Visual Studio",
+        "Ensured the performance and the validity of the tests with Microsoft Dynamics 365",
+        "Secured data integrity of the automated tests by using SQL commands in Microsoft SQL"
+      ],
+      "tech_stack": [
+        "X++",
+        "Microsoft Visual Studio",
+        "Microsoft Dynamics 365",
+        "SQL",
+        "Microsoft SQL"
+      ],
+      "logo_path": "/genetec.jpeg",
+      "link": "https://www.genetec.com/"
+    }
+  ]
+  

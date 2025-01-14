@@ -1,14 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import MenuIcon from '@mui/icons-material/Menu';
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import HomeIcon from '@mui/icons-material/Home';
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import { Links } from "@/app/types/linkTypes";
-import { Social } from '@/app/types/socialTypes';
-import { Email } from '@mui/icons-material';
+import { Links,Social } from "@/app/types";
 
-import Image from "next/image";
+import NavLink from "../pageLinks";
+import SocialLink from "../socials";
 
 interface NavBarProps {
     links: Links;
@@ -18,7 +16,6 @@ interface NavBarProps {
   }
 const Navbar: React.FC<NavBarProps> = ({ links, socials, isOpen, toggle }) => {
     const [isMobile, setIsMobile] = useState(false);
-    const pathname = usePathname();
 
     // Effect hook to handle screen resizing
     useEffect(() => {
@@ -54,73 +51,40 @@ const Navbar: React.FC<NavBarProps> = ({ links, socials, isOpen, toggle }) => {
                     
                     {/* Home Page Button */}
                     <Link href="/">
-                        <PermIdentityIcon
+                        <HomeIcon
                             className={`text-gray-500 hover:text-black transition-colors duration-300 text-3xl ${
                                 isMobile ? "ml-6" : ""
                             }`}
                         />
                     </Link>
 
-                    <ul className="hidden md:flex gap-x-8 ml-6 text-gray-400">
-                    {socials.map((social, index) => (
-                        <li key={index}>
-                        <Link
-                            href={social.link}
-                            passHref
-                            target={social.name === "Mail" ? undefined : "_blank"}
-                            rel={social.name === "Mail" ? undefined : "noopener noreferrer"}
-                        >
-                            <div className="hover:scale-110 hover:opacity-100 transition-transform transition-opacity duration-200 opacity-70 flex items-center">
-                            {social.name === "Mail" ? (
-                                <Email
-                                className="text-gray-700 hover:text-red-500"
-                                style={{ fontSize: 40 }}
-                                />
-                            ) : (
-                                <Image
-                                src={social.image}
-                                alt={social.name}
-                                width={40}
-                                height={40}
-                                style={{ borderRadius: '50%' }}
-                                className="filter grayscale hover:filter-none transition-all duration-200"
-                                />
-                            )}
-                            </div>
-                        </Link>
-                        </li>
-                    ))}
+                    <ul className="hidden md:flex gap-x-16 text-gray-400 text-xl">
+                        {links.links.map((link) => (
+                            <NavLink key={link} link={link} />
+                        ))}
+                        </ul>
+                    <ul className={`${isOpen ? "hidden" : "hidden md:flex"} gap-x-8 ml-6 text-gray-400 mr-10`}>
+                        {socials.map((social, index) => (
+                            <li key={index}>
+                            <SocialLink 
+                                link={social.link} 
+                                name={social.name} 
+                                image={social.image} 
+                                fontSize={40} 
+                            />
+                            </li>
+                        ))}
                     </ul>
 
                     {/* Hamburger Menu*/}
                     {isMobile && (
                         <MenuIcon
-                        className="inline-flex items-center md:hidden mr-6"
+                        className="inline-flex items-center md:hidden mr-10"
                         fontSize="large"
                         onClick={toggle}
                         style={{ cursor: 'pointer' }}
                         />
                     )}
-                    
-                    {/* Navbar Links */}
-                    <ul className="hidden md:flex gap-x-16 text-gray-400">
-                    {links.links.map((link) => {
-                    const text = link.replace("/", "").charAt(0).toUpperCase() + link.slice(2);
-                        return (
-                            <li key={link}>
-                                <Link href={link}>
-                                <p
-                                    className={`cursor-pointer transition duration-200 ${
-                                        pathname === link ? "text-black font-bold" : "hover:text-black"
-                                    }`}
-                                    >
-                                    {text}
-                                </p>
-                                </Link>
-                            </li>
-                        );
-                     })}  
-                    </ul>
                 </div>
             </div>
       </div>

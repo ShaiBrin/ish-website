@@ -1,9 +1,9 @@
 import React from "react";
-import Card from "@mui/joy/Card";
+import { Card, CardContent } from "@mui/material";
 import Typography from "@mui/joy/Typography";
-import CardContent from "@mui/joy/CardContent";
+import Image from 'next/image';
 import Link from "next/link";
-import Image from "next/image";
+
 interface WorkCardProps {
     job_title:string;
     company: string;
@@ -27,104 +27,38 @@ const BasicWorkCard: React.FC<WorkCardProps> = ({
 }) => {
   return (
     <Link href={link} passHref  target="_blank">
-      <Card
-        variant="outlined"
-        sx={{
-          maxWidth: 275,
-          margin: "auto",
-          borderRadius: "lg",
-          boxShadow: "sm",
-          "&:hover": {
-            boxShadow: "md",
-            cursor: "pointer", 
-          },
-          overflow: "hidden",
-        }}
-      >
-        <Image
+      <Card variant="outlined" className="card">
+      <Image  
           src={logo}
           alt={`${company} logo`}
-          width={70} 
-          height={70} 
-          style={{
-            objectFit: "contain",
-            display: "block",
-            margin: "auto",
-          }}
-        />
+          width={70}
+          height={70}
+          style={{margin: "auto", "marginTop": "1rem"}}
+        />        
         <CardContent>
-            {/* Job Title */}
-            <Typography 
-                level="h3" 
-                sx={{ 
-                textAlign: "center", 
-                fontWeight: "bold", 
-                fontSize: "1.5rem", 
-                marginBottom: "0.5rem" 
-                }}
-            >
-                {job_title}
+            
+            <Typography level="h3" sx={{textAlign: "center",}}>
+              {job_title}
             </Typography>
             
-            {/* Company Name */}
-            <Typography 
-                sx={{ 
-                textAlign: "center", 
-                fontWeight: "medium", 
-                fontSize: "1.2rem", 
-                color: "text.secondary", 
-                marginBottom: "0.25rem" 
-                }}
-            >
-                {company}
+            <Typography sx={{ textAlign: "center", fontWeight: "medium", fontSize: "1.2rem", marginBottom: "0.25rem" }}>
+              {company}
             </Typography>
             
-            {/* Location */}
-            <Typography 
-                sx={{ 
-                textAlign: "center", 
-                fontWeight: "regular", 
-                fontSize: "1rem", 
-                color: "text.secondary", 
-                marginBottom: "0.25rem" 
-                }}
-            >
+            <Typography sx={{ textAlign: "center"}}>
                 {location}
             </Typography>
-            
-            {/* Dates */}
-            <Typography 
-                sx={{ 
-                textAlign: "center", 
-                fontWeight: "light", 
-                fontSize: "0.9rem", 
-                color: "text.secondary", 
-                marginBottom: "1rem" 
-                }}
-            >
+
+            <Typography sx={{ textAlign: "center", marginBottom:"0.25rem" }}>
                 {dates}
             </Typography>
-            
-            {/* Tech Stack */}
+
             <Typography 
-                sx={{ 
-                mt: 1, 
-                fontWeight: "bold", 
-                textAlign: "center", 
-                fontSize: "1rem" 
-                }}
-            >
+                sx={{ fontWeight: "bold", textAlign: "center", }}>
                 {tech_stack.join(" • ")}
             </Typography>
 
-            {/* Functions */}
-            <Typography 
-                sx={{ 
-                mt: 1, 
-                fontSize: "0.9rem", 
-                color: "text.primary" 
-                }}
-            >
+            <Typography sx={{ mt: 1 }}>
                 {functions.join(" • ")}
             </Typography>
         </CardContent>

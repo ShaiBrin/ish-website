@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="w-full">
+        <div className="w-full pl-5">
           <Navigation/>
         </div>
         <div className="pt-24 pb-20"> 

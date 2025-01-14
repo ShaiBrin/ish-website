@@ -4,7 +4,7 @@ import WorkExpTimeline from "../ui/work/timeline";
 import jobData from "../../data/jobData.json"
 import WorkGrid from "../ui/work/mobile/workCard";
 import AnimatedPage from "../ui/animation";
-import { Job } from "../types/jobTypes";
+import { Job } from "@/app/types/";
 
 
 export default function Work() {
