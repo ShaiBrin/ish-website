@@ -22,6 +22,7 @@ const ProjectsGrid: React.FC<ProjectsProps> = ({ projects }) => {
               name={project.name}
               logo={project.logo}
               tech={project.tech}
+              premise={project.premise}
               description={project.description}
               link={project.link}
               />

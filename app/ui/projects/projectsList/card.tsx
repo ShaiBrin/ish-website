@@ -8,6 +8,7 @@ interface BasicCardProps {
   name: string;
   logo: string;
   tech: string[];
+  premise: string;
   description: string;
   link: string;
 }
@@ -17,6 +18,7 @@ const BasicCard: React.FC<BasicCardProps> = ({
   logo,
   tech,
   description,
+  premise,
   link
 }) => {
   return (
@@ -50,10 +52,13 @@ const BasicCard: React.FC<BasicCardProps> = ({
           <Typography level="h3" sx={{ textAlign: "center" }}>
             {name}
           </Typography>
-          <Typography sx={{ mt: 1, fontWeight: "bold" }}>
+          <Typography sx={{ mt: 1, fontWeight: "bold", textAlign: 'center' }}>
             {tech.join(" • ")}
           </Typography>
-          <Typography sx={{ mt: 1 }}>
+          <Typography sx={{ mt: 1, fontStyle: 'italic' }}>
+            {premise}
+          </Typography>
+          <Typography sx={{ mt: 1, fontWeight: 'bold' }}>
             {description}
           </Typography>
         </CardContent>

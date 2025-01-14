@@ -19,7 +19,7 @@ export default function RootLayout({
         <div className="w-full">
           <Navigation/>
         </div>
-        <div className="pt-20 pb-20"> 
+        <div className="pt-24 pb-20"> 
           {children}
         </div>
         <div>
