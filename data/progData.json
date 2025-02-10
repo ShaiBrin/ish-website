@@ -31,6 +31,12 @@
   {
     "name": "Frameworks & Libraries",
       "items": [
+
+        {
+          "tech": "openAI",
+          "image": "/openAILogo.webp"
+        },
+
         {
           "tech": "TensorFlow",
           "image": "/tensorflow.webp"

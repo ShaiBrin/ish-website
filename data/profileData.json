@@ -1,9 +1,17 @@
 {
-    "name": "Ishraq Shabab",
-    "profession": "Software Engineer",
-    "description": [
-      "I'm a software engineer with a unique background, passionate about solving complex problems and continuously exploring new technologies.",
-      "My career began as a Software Engineer in Test, where I gained a deep understanding of the importance of testing software before deployment. Later, I took on the responsibility of deploying CI/CD pipelines within the cybersecurity team as a DevOps engineer, which was my first hands-on experience integrating and deploying new features throughout the software lifecycle. As an iOS engineer, I contributed to the development of new components in Swift. I then joined Amazon, where I honed my ability to write clean, efficient code while taking ownership of my work and documenting it thoroughly. I also had the opportunity to refactor the company's website, adhering to the best principles of software development, during my internship as a Full Stack developer. This project improved the website's SEO and overall performance. Additionally, I've worked as an Android Developer contractor, where I gained hands-on experience in client communication and efficient project execution, further enhancing my skills in a dynamic work environment.",
-      "Over the years, I have successfully built and delivered quality products and features, as well as created innovative tools and applications for clients and customers. Like my diverse work experience, I've built projects in mobile and web development, as well as in machine learning and was awarded the fellow recipient at Palantir's DevCon."
-    ]
-  }
+  "name": "Ishraq Shabab",
+  "profession": "Software Engineer",
+  "description": [
+    "",
+    "During my journey as a software engineer, I strived building a versatile background spanning from Kotlin to Swift development to full stack development and currently working as a co-founder at a startup",
+    "Currently, I'm the Lead engineer at Automia, an AI agent speech-to-text clinical note taking application by leveragin open AI framework",
+    "",
+    "My career began as a Software Engineer in Test, where I developed a deep understanding of software reliability and the importance of rigorous testing before deployment. From there, I transitioned into a DevOps Engineer role, deploying CI/CD pipelines within a cybersecurity team, gaining hands-on experience in integrating and deploying features across the software lifecycle. Later, as an iOS Engineer, I contributed to building new Swift components, expanding my expertise in mobile development. My time at Amazon as a Full Stack Developer Intern allowed me to refactor the company’s website, improving SEO and performance while adhering to best software development practices. Additionally, I worked as an Android Developer Contractor, where I refined my ability to communicate with clients and deliver high-quality mobile solutions efficiently.",
+    "",
+    "I am deeply passionate about solving complex, mission-critical problems that require technical depth and creative problem-solving. I actively explore machine learning, deep neural networks, and open-source AI tools, continuously seeking ways to integrate intelligent systems into software solutions. My work in mobile and web development has allowed me to build scalable applications across different platforms, and my background in DevOps and automation has strengthened my understanding of infrastructure optimization and CI/CD processes.",
+    "",
+    "I'm driven by solving complex mission critical problems while connecting functionalities together.",
+    "",
+    "I was honored to be a Palantir DevCon Fellow Recipient, recognizing my contributions to software engineering and innovation."
+  ]
+}

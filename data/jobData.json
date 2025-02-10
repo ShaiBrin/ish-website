@@ -5,10 +5,9 @@
     "dates": "Jan 2025 – Present",
     "location": "Remote",
     "functions": [
-      "As the Lead Software Engineer for a remote physiotherapy application",
-      "I spearheaded the development of an innovative AI voice-to-text note-taking platform.",
-      "Utilizing NextJS and Tailwind, I designed a user-friendly interface for physiotherapists to record patient conversations seamlessly. With Python and FastAPI,",
-      "I implemented a robust backend system to categorize and store notes efficiently, enhancing overall workflow and productivity."
+      "As the Full Stack engineer for a remote physiotherapy application",
+      "I spearheaded the development of an innovative AI agent voice-to-text note-taking platform by leveraring open AI framework.",
+      "Utilizing NextJS and Tailwind, I designed a user-friendly interface for physiotherapists to record patient conversations seamlessly. With Python and FastAPI,"
     ],
     "tech_stack": [
       "Python",
@@ -18,7 +17,7 @@
       "Tailwind"
     ],
     "logo_path": "/Automia_logo_blue.avif",
-    "link": "https://www.automia.tech/"
+    "link": "https://d1a48ec4c72c.ngrok.app/"
   },  
   {
       "job_title": "Mobile Developer",
@@ -35,7 +34,7 @@
         "Jetpack Compose",
         "Swagger API",
         "DAO",
-        "Repository Pattern"
+        "repository Pattern"
       ],
       "logo_path": "/mentallys.jpeg",
       "link": "https://mentallys.com/en"

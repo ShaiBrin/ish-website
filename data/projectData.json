@@ -1,4 +1,12 @@
-[
+[   
+    {
+      "name": "ImpactSense",
+      "logo": "/palantir.webp",
+      "tech": ["Langchain", "OSDK", "AIP Function Logic", "Workshop Module"],
+      "premise": "Determining in advance if the hospitales have the necessary supplies and equipments to accomodate patients.",
+      "description": "AI Agent for hospitals that answers users questions regarding its capacity. Palantir Foundry application that determine the closest hospitals to a road accident",
+      "link": "https://github.com/ShaiBrin/Palantir-ImpactSense/tree/main/impactSense-app"
+    },
     {
       "name": "MediMind",
       "logo": "/palantir.webp",

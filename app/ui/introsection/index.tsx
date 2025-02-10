@@ -7,7 +7,7 @@ interface ProfileProps {
   profile: Profile;
 }
 
-const introSideTerms = ['Software', 'Engineer', 'Test', 'iOS', 'Android', 'Amazon','DevOps', 'Developer', 'Jupyter', 'Tensorflow','Palantir'];
+const introSideTerms = ['AI','agent','open','ai','mission','critical','complex','problems','solving','Goal','Full','Stack','SEO','CI/CD','Software', 'Engineer', 'Test', 'iOS', 'Android', 'Amazon','DevOps', 'Developer', 'Jupyter', 'Tensorflow','Palantir'];
 
 const Introsection: React.FC<ProfileProps> = ({ profile }) => {
   return (
