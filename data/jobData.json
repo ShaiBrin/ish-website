@@ -1,8 +1,28 @@
 [
   {
+    "job_title": "Forward Deployed Engineer",
+    "company": "Fujitsu Intelligence",
+    "dates": "April 2025 – Present",
+    "location": "Remote",
+    "functions": [
+      "As the Full Stack engineer for a remote physiotherapy application",
+      "I spearheaded the development of an innovative AI agent voice-to-text note-taking platform by leveraring open AI framework.",
+      "Utilizing NextJS and Tailwind, I designed a user-friendly interface for physiotherapists to record patient conversations seamlessly. With Python and FastAPI,"
+    ],
+    "tech_stack": [
+      "Foundry",
+      "Ontology",
+      "Pipeline Builder",
+      "Workshop Module",
+      "Python"
+    ],
+    "logo_path": "/fujitsu.png",
+    "link": "https://www.fujitsu.com/global/services/business-services/data-intelligence/"
+  }, 
+  {
     "job_title": "Co-Founder - Lead Engineer ",
     "company": "AutomiaAI",
-    "dates": "Jan 2025 – Present",
+    "dates": "Jan 2025 – Apr 2025",
     "location": "Remote",
     "functions": [
       "As the Full Stack engineer for a remote physiotherapy application",
