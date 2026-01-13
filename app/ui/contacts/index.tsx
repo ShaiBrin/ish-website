@@ -1,7 +1,7 @@
 "use client"
 import { Box } from '@mui/material';
 import { Social } from '@/app/types/';
-import Grid from '@mui/material/Grid2'
+import Grid from '@mui/material/Grid'
 import Link from "next/link";
 import Image from 'next/image';
 
