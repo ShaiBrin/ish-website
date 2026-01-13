@@ -1,5 +1,4 @@
 import React from 'react';
-import { Timeline, TimelineItem, TimelineOppositeContent, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
 import Typography from '@mui/material/Typography';
 import { Job } from '@/app/types';
 import Image from 'next/image';
@@ -14,41 +13,80 @@ const workExpTerms = ['Gatsby', 'Typescript', 'Kotlin', 'SQL', 'GraphQL', 'Hubsp
 
 const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
   return (
-    <Timeline position="alternate">
-      {jobData.map((job, index) => (
-        <TimelineItem key={index}>
-          <TimelineOppositeContent sx={{ m: 'auto 0' }} variant="body2" color="text.secondary">
-            {job.functions.map((desc, index) => (
-              <Typography key={index}>
-                • <HighlightText text={desc} highlightTerms={workExpTerms} />
-              </Typography>
-            ))}
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot className="timeline-dot">
-              <Link href={job.link} passHref target="_blank">
-                <Image
-                  src={job.logo_path}
-                  alt={`${job.company} logo`}
-                  width={700}
-                  height={700}
-                  className="timeline-dot-img"
-                />
-              </Link>
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ px: 2 }}>
-            <Typography variant="h6" component="span">
-              {job.job_title}
-            </Typography>
-            <Typography>{job.company}</Typography>
-            <Typography variant="body2">{job.dates}</Typography>
-          </TimelineContent>
-        </TimelineItem>
-      ))}
-    </Timeline>
+    <div className="relative">
+      {/* Timeline line */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-700"></div>
+      
+      <div className="space-y-12">
+        {jobData.map((job, index) => {
+          const isEven = index % 2 === 0;
+          return (
+            <div key={index} className="relative flex items-center">
+              {/* Content - alternates left and right */}
+              <div className={`w-1/2 ${isEven ? 'pr-8 text-right' : 'ml-auto pl-8 text-left'}`}>
+                <div className="mb-4">
+                  {isEven ? (
+                    <div className="space-y-1">
+                      {job.functions.map((desc, idx) => (
+                        <Typography key={idx} variant="body2" className="text-gray-600 dark:text-gray-400">
+                          • <HighlightText text={desc} highlightTerms={workExpTerms} />
+                        </Typography>
+                      ))}
+                    </div>
+                  ) : (
+                    <div>
+                      <Typography variant="h6" component="span" className="font-semibold">
+                        {job.job_title}
+                      </Typography>
+                      <Typography className="text-gray-700 dark:text-gray-300">{job.company}</Typography>
+                      <Typography variant="body2" className="text-gray-500 dark:text-gray-400">{job.dates}</Typography>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Timeline dot */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                <div className="w-16 h-16 rounded-full bg-white dark:bg-gray-800 border-4 border-gray-300 dark:border-gray-600 flex items-center justify-center shadow-lg timeline-dot">
+                  <Link href={job.link} passHref target="_blank" className="block">
+                    <Image
+                      src={job.logo_path}
+                      alt={`${job.company} logo`}
+                      width={48}
+                      height={48}
+                      className="timeline-dot-img rounded-full object-contain"
+                    />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Content - alternates left and right */}
+              <div className={`w-1/2 ${isEven ? 'ml-auto pl-8 text-left' : 'pr-8 text-right'}`}>
+                <div className="mb-4">
+                  {isEven ? (
+                    <div>
+                      <Typography variant="h6" component="span" className="font-semibold">
+                        {job.job_title}
+                      </Typography>
+                      <Typography className="text-gray-700 dark:text-gray-300">{job.company}</Typography>
+                      <Typography variant="body2" className="text-gray-500 dark:text-gray-400">{job.dates}</Typography>
+                    </div>
+                  ) : (
+                    <div className="space-y-1">
+                      {job.functions.map((desc, idx) => (
+                        <Typography key={idx} variant="body2" className="text-gray-600 dark:text-gray-400">
+                          • <HighlightText text={desc} highlightTerms={workExpTerms} />
+                        </Typography>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 };
 
