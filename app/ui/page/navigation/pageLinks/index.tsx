@@ -1,6 +1,5 @@
 import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
-import DescriptionIcon from '@mui/icons-material/Description';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -25,8 +24,6 @@ const NavLink: React.FC<NavLinkProps> = ({ link, toggle }) => {
         return <WorkIcon style={{ color: pathname === link ? "brown": "inherit"}}/>;
       case "/projects":
         return <CodeIcon style={{ color: pathname === link ? "blue": "inherit"}}/>;
-      case "/resume":
-        return <DescriptionIcon style={{ color: pathname === link ? "gray": "inherit"}}/>;
       default:
         return null;
     }
