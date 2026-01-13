@@ -1,7 +1,7 @@
 "use client";
 import { Box } from "@mui/material";
 import { Project } from "@/app/types";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
 import BasicCard from "./card"; 
 
 interface ProjectsProps {

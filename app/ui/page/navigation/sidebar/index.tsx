@@ -1,5 +1,5 @@
 import CloseIcon from '@mui/icons-material/Close';
-import Grid from '@mui/material/Grid2'
+import Grid from '@mui/material/Grid'
 import { Links, Social } from "@/app/types";
 import SocialLink from "../socials";
 import NavLink from "../pageLinks";
