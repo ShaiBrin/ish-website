@@ -8,8 +8,8 @@ const Profilesection = () => {
             <Image 
                   src={'/profile.jpeg'}
                   alt={'profile'}
-                  width={600} 
-                  height={100} 
+                  width={500} 
+                  height={2} 
                   className="square-full duration-300 opacity-100"
                 />
         </div>

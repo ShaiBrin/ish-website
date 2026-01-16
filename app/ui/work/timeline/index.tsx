@@ -28,7 +28,7 @@ const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
                   {isEven ? (
                     <div className="space-y-1">
                       {job.functions.map((desc, idx) => (
-                        <Typography key={idx} variant="body2" className="text-gray-600 dark:text-gray-400">
+                        <Typography key={idx} variant="body2" className="text-gray-600 dark:text-gray-400 text-left pl-8">
                           • <HighlightText text={desc} highlightTerms={workExpTerms} />
                         </Typography>
                       ))}
@@ -47,7 +47,7 @@ const WorkExpTimeline: React.FC<WorkExpTimelineProps> = ({ jobData }) => {
 
               {/* Timeline dot */}
               <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                <div className="w-16 h-16 rounded-full bg-white dark:bg-gray-800 border-4 border-gray-300 dark:border-gray-600 flex items-center justify-center shadow-lg timeline-dot">
+                <div className="w-16 h-16 rounded-full bg-white  flex items-center justify-center shadow-lg timeline-dot">
                   <Link href={job.link} passHref target="_blank" className="block">
                     <Image
                       src={job.logo_path}

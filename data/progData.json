@@ -21,33 +21,19 @@
       {
         "tech": "Swift",
         "image": "/swift.webp"
-      },
-      {
-        "tech": "C++",
-        "image": "/c.webp"
       }
     ]
   },
   {
     "name": "Frameworks & Libraries",
       "items": [
-
         {
-          "tech": "openAI",
-          "image": "/openAILogo.webp"
+          "tech": "Foundry",
+          "image": "/palantir.webp"
         },
-
         {
           "tech": "TensorFlow",
           "image": "/tensorflow.webp"
-        },
-        {
-          "tech": "Scikit Learn",
-          "image": "/scikit.webp"
-        },
-        {
-          "tech": "Numpy",
-          "image": "/numpy.webp"
         },
         {
           "tech": "React",
@@ -98,10 +84,6 @@
         {
           "tech": "Node",
           "image": "/node.webp"
-        },
-        {
-          "tech": "AWS",
-          "image": "/aws.webp"
         },
         {
           "tech": "Git",
