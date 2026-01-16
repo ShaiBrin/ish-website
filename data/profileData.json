@@ -3,16 +3,12 @@
   "profession": "Software Engineer",
   "description": [
     "",
-    "During my journey as a software engineer, I strived building a versatile background spanning from Kotlin to Swift development to full stack development.",
+    "Versatile software engineer with a passion in creating end-to-end applications.",
     "",
-    "Currently, I'm a forward deployed engineer at Fujitsu Intelligence where I design and build Palantir Foundry specific use-cases with",
-    "",
-    "My career began as a Software Engineer in Test, where I developed a deep understanding of software reliability and the importance of rigorous testing before deployment. From there, I transitioned into a DevOps Engineer role, deploying CI/CD pipelines within a cybersecurity team, gaining hands-on experience in integrating and deploying features across the software lifecycle. Later, as an iOS Engineer, I contributed to building new Swift components, expanding my expertise in mobile development. My time at Amazon as a Full Stack Developer Intern allowed me to refactor the company’s website, improving SEO and performance while adhering to best software development practices. Additionally, I worked as an Android Developer Contractor, where I refined my ability to communicate with clients and deliver high-quality mobile solutions efficiently.",
-    "",
-    "I am deeply passionate about solving complex, mission-critical problems that require technical depth and creative problem-solving. I actively explore machine learning, deep neural networks, and open-source AI tools, continuously seeking ways to integrate intelligent systems into software solutions. My work in mobile and web development has allowed me to build scalable applications across different platforms, and my background in DevOps and automation has strengthened my understanding of infrastructure optimization and CI/CD processes.",
-    "",
-    "I'm driven by solving complex mission critical problems while connecting functionalities together.",
-    "",
-    "I was honored to be a Palantir DevCon Fellow Recipient, recognizing my contributions to software engineering and innovation."
+    "Designed and build applications working alongside decision-makers",
+    "Datasets with write-back capabilities with Pipeline Builder, Data Lineage and Python",
+    "AI Agentic workflow in Claude and Palantir Function Logic",
+    "Full-stack applications using Python for  backend and Typescript for Front-end with vercel",
+    ""
   ]
 }
